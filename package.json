@@ -28,7 +28,9 @@
   },
   "scripts": {
     "postinstall": "node lib/install.js",
-    "test": "xo && mocha"
+    "test": "xo && mocha",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "files": [
     "cli.js",
@@ -44,9 +46,10 @@
     "png"
   ],
   "dependencies": {
-    "bin-build": "^2.0.0",
+    "bin-build": "^3.0.0",
     "bin-wrapper": "^3.0.0",
-    "logalot": "^2.0.0"
+    "logalot": "^2.0.0",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "bin-check": "^2.0.0",
@@ -55,5 +58,6 @@
     "mocha": "^2.2.4",
     "rimraf": "^2.3.2",
     "xo": "*"
-  }
+  },
+  "snyk": true
 }
